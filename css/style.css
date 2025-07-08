@@ -36,6 +36,10 @@ header {
   flex-grow: 1;
   font-size: 15px;
   background-color: #222222;
+  cursor: context-menu;
+}
+.hover:hover{
+  color: #b0c3d8;
 }
 ul {
   flex: 1 0 0;
@@ -76,6 +80,9 @@ img[alt="bars-4"] {
   justify-content: center;
   flex: 0 0 280px;
   background: #222222;
+}
+.logo:hover{
+    color: #b0c3d8;
 }
 /* end of header */
 /* section avatar */
