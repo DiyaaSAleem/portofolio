@@ -1,6 +1,7 @@
 * {
   box-sizing: content-box;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
@@ -17,6 +18,7 @@ i {
 }
 /* header */
 header {
+  position: fixed;
   padding: 10px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
@@ -28,7 +30,6 @@ header {
   display: flex;
   height: 50px;
   width: 100vw;
-
   color: #ffffff;
   flex-direction: row;
   gap: 40px;
@@ -46,6 +47,7 @@ ul {
   background: #222222;
 }
 li {
+  color: #ffffff;
   font-size: 15px;
   margin-right: 30px;
   flex: 0 0 20px;
@@ -53,6 +55,13 @@ li {
   display: flex;
   justify-content: center;
   font-size: medium;
+}
+img[alt="bars-4"] {
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+
+  margin: 8px 60px 6px 0px;
 }
 .logo {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -85,10 +94,11 @@ main {
 
   border-radius: 50%;
   width: 200px;
-  padding: 10px;
+  padding: 20px;
   object-fit: cover;
 }
 .co-img {
+  margin-top: 50px;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -230,6 +240,7 @@ figure .lang {
   gap: 20px;
 }
 .project-title {
+  padding-top: 50px;
   grid-row: 1 / 2;
   grid-column: 1 / 3;
   display: flex;
@@ -384,6 +395,7 @@ img[alt="project-css"] {
 /* end of projects */
 /* experiances */
 .sec-4 {
+  padding-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px auto auto auto;
@@ -556,7 +568,7 @@ a[href^="mailto"] {
   gap: 8px;
   margin-top: 30px;
 }
-/* section header */
+/* -------------------- Header Section -------------------- */
 @media (max-width: 1024px) {
   header {
     flex-direction: row;
@@ -567,23 +579,23 @@ a[href^="mailto"] {
     padding: 10px 20px;
     height: auto;
   }
-
   .logo {
-    font-size: 26px;
+    font-size: 30px;
     flex: 0 0 auto;
   }
-
   ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 45px;
     padding: 0;
   }
-
   li {
+    display: none;
     font-size: 14px;
     margin-right: 10px;
     flex: 0 1 auto;
+  }
+  img[alt="bars-4"] {
+    width: 35px;
+    height: 35px;
+    visibility: visible;
   }
 }
 
@@ -595,25 +607,22 @@ a[href^="mailto"] {
     gap: 8px;
     padding: 10px;
   }
-
   .logo {
     font-size: 20px;
   }
-
   ul {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
   }
-
   li {
     font-size: 13px;
     flex: 0 1 auto;
   }
 }
-/* end oh header */
-/* avatar section */
+
+/* -------------------- Avatar Section -------------------- */
 @media (max-width: 1024px) {
   .sec-1 {
     display: flex;
@@ -622,7 +631,6 @@ a[href^="mailto"] {
     padding: 30px 15px;
     gap: 20px;
   }
-
   .co-img,
   .co-hedding,
   .section-text,
@@ -634,28 +642,23 @@ a[href^="mailto"] {
     text-align: center;
     justify-content: center;
   }
-
   .avatar {
     width: 150px;
     margin: 15px auto;
   }
-
   h1 {
     font-size: 24px;
     text-align: center;
   }
-
   .paragraph-text {
     font-size: 16px;
     padding: 0 10px;
   }
-
   .link1,
   .link2 {
     justify-content: center;
     margin: 0;
   }
-
   .link1 a,
   .link2 a {
     width: 140px;
@@ -669,15 +672,12 @@ a[href^="mailto"] {
   .avatar {
     width: 120px;
   }
-
   h1 {
     font-size: 20px;
   }
-
   .paragraph-text {
     font-size: 14px;
   }
-
   .link1 a,
   .link2 a {
     width: 120px;
@@ -685,8 +685,8 @@ a[href^="mailto"] {
     font-size: 13px;
   }
 }
-/* end of avatar */
-/* experiance with section */
+
+/* -------------------- Experience With Section -------------------- */
 @media (max-width: 1024px) {
   .paragraph-head {
     font-size: 18px;
@@ -694,13 +694,11 @@ a[href^="mailto"] {
     margin-top: 80px;
     text-align: center;
   }
-
   figure {
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
   }
-
   figure .lang {
     height: 32px;
     padding: 8px;
@@ -715,13 +713,11 @@ a[href^="mailto"] {
     margin-top: 60px;
     text-align: center;
   }
-
   figure {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
   }
-
   figure .lang {
     height: 28px;
     padding: 6px;
@@ -736,21 +732,19 @@ a[href^="mailto"] {
     margin-top: 40px;
     text-align: center;
   }
-
   figure {
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
   }
-
   figure .lang {
     height: 26px;
     padding: 5px;
     margin: 0;
   }
 }
-/* end of experiance with */
-/* projects */
+
+/* -------------------- Projects Section -------------------- */
 @media (max-width: 1024px) {
   img[alt="project-html"],
   img[alt="project-css"],
@@ -786,12 +780,11 @@ a[href^="mailto"] {
     line-height: 25px;
     letter-spacing: 0.5px;
   }
-
   img[alt="project-html"],
   img[alt="project-css"],
   .part-html,
   .part-css {
-    width: 140;
+    width: 240px;
   }
   .part-html,
   .part-css {
@@ -802,20 +795,18 @@ a[href^="mailto"] {
     font-size: 8px;
     padding-top: 10px;
   }
-
   .title-html,
   .title-css {
     font-size: 15px;
   }
-
   .icon1,
   .icon {
     width: 18px;
     height: 18px;
   }
 }
-/* end of projects */
-/* experiances section */
+
+/* -------------------- Experiences Section -------------------- */
 @media (max-width: 1024px) {
   .experience {
     font-size: 28px;
@@ -837,15 +828,12 @@ a[href^="mailto"] {
     width: 70%;
     padding-left: 40px;
     grid-template-columns: 40px 1fr 1fr;
-
     align-items: center;
     justify-content: center;
   }
-
   time {
     font-size: 13px;
   }
-
   .skillg {
     font-size: 12px;
     padding-left: 5px;
@@ -858,40 +846,34 @@ a[href^="mailto"] {
     line-height: 32px;
     text-align: center;
   }
-
   .grid-item {
     width: 65%;
     padding-left: 20px;
     grid-template-columns: 30px 1fr 1fr;
     grid-template-rows: auto auto;
   }
-
   .google-img,
   .apple-img,
   .meta-img {
     width: 20px;
     height: 20px;
   }
-
   .ti-google,
   .ti-apple,
   .ti-meta {
     font-size: 12px;
     text-align: left;
   }
-
   time {
     font-size: 11.5px;
   }
-
   .skillg {
     font-size: 11px;
     padding-left: 5px;
   }
 }
 
-/* end of experiances section */
-/* section footer */
+/* -------------------- Footer Section -------------------- */
 @media (max-width: 1024px) {
   .contact {
     font-size: 15px;
@@ -904,6 +886,7 @@ a[href^="mailto"] {
     justify-content: flex-start;
   }
 }
+
 @media (max-width: 768px) {
   h3 + p {
     font-size: 11px;
